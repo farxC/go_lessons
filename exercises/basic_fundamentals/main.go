@@ -73,6 +73,14 @@ func main() {
 	areaRetangle := exercises.AreaFromRetangle(10, 10)
 	fmt.Println(areaRetangle)
 
+	// 16. Temperature Unit Conversion
+	celsius := float32(100.0)
+	kelvin := float32(273.15)
+	fahrenheit := exercises.TemperatureUnitConversion(celsius, exercises.Celsius, exercises.Fahrenheit)
+	celsius_res := exercises.TemperatureUnitConversion(kelvin, exercises.Kelvin, exercises.Celsius)
+	fmt.Printf("%.2f Celsius is %.2f Fahrenheit\n", celsius, fahrenheit)
+	fmt.Printf("%.2f Kelvin is %.2f Celsius\n", kelvin, celsius_res)
+
 	// 19. Count consoant and vowels in a text
 	textExample := "AEIOU"
 	conVow := exercises.CountConsonantAndVowels(textExample)
@@ -107,5 +115,8 @@ func main() {
 	nums_sliced := []float32{10, 10, 10, 10, 10}
 	average := exercises.Average(nums_sliced)
 	fmt.Println(average)
+
+	// 26. Benchmarking a sort algorithm using goroutines and synchronization
+	exercises.RunBenchmark()
 
 }
